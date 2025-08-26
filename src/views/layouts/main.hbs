@@ -1,0 +1,52 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{#if pageTitle}}{{pageTitle}}{{else}}Sneakers Paradise{{/if}}</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+
+  <body>
+
+    {{#if error}}
+      <div class="error-wrap">
+        <p>Error</p>
+      </div>
+    {{/if}}
+
+    <header>
+      <div class="nav-wrapper">
+        <img
+          class="logo"
+          src="https://firebasestorage.googleapis.com/v0/b/angular-project-4050b.appspot.com/o/js%20back-end%2Flogo.png?alt=media&token=bafe8fa6-451c-489b-b969-d9fb63002206"
+          alt="logo"
+        />
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/catalog">Catalog</a></li>
+            <li><a href="/about">About</a></li>
+
+            {{#if user}}
+              <li><a href="/profile">Profile</a></li>
+              <li><a href="/sneakers/create">Add Sneakers</a></li>
+              <li><a href="/auth/logout">Logout</a></li>
+              <li>{{user.email}}</li>
+            {{else}}
+              <li><a href="/auth/login">Login</a></li>
+              <li><a href="/auth/register">Register</a></li>
+            {{/if}}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    {{{body}}}
+    <footer>
+      <div class="wrap">
+        <p>&copy; 2025 Sneacker Paradise. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+
+</html>

@@ -1,0 +1,87 @@
+<div class="create-wrapper">
+  <section class="create-hero">
+    <div class="wrap">
+      <h2>Edit Sneakers</h2>
+    </div>
+  </section>
+
+  <section class="create-form">
+    <div class="wrap">
+      <form method="POST">
+        <div class="input-wrap">
+          <input
+            type="text"
+            id="brand"
+            name="brand"
+            placeholder="Brand"
+            value="{{sneaker.brand}}"
+          />
+        </div>
+        <div class="input-wrap">
+          <input
+            type="text"
+            id="model"
+            name="model"
+            placeholder="Model"
+            value="{{sneaker.model}}"
+          />
+        </div>
+        <div class="input-wrap">
+          <input
+            type="number"
+            id="price"
+            name="price"
+            placeholder="Price"
+            value="{{sneaker.price}}"
+          />
+        </div>
+        <div class="input-wrap">
+          <input
+            type="text"
+            id="condition"
+            name="condition"
+            placeholder="Condition"
+            value="{{sneaker.condition}}"
+          />
+        </div>
+        <div class="input-wrap">
+          <input
+            type="number"
+            id="year"
+            name="year"
+            placeholder="Year"
+            value="{{sneaker.year}}"
+          />
+        </div>
+        <div class="input-wrap">
+          <input
+            type="number"
+            id="size"
+            name="size"
+            placeholder="Size"
+            value="{{sneaker.size}}"
+          />
+        </div>
+        <div class="input-wrap">
+          <input
+            type="text"
+            id="image"
+            name="imageUrl"
+            placeholder="ImageUrl"
+            value="{{sneaker.imageUrl}}"
+          />
+        </div>
+        <div class="input-wrap">
+          <input
+            type="text"
+            id="description"
+            name="description"
+            placeholder="Description"
+            value="{{sneaker.description}}"
+          />
+        </div>
+        <button type="submit" class="btn">Save Changes</button>
+      </form>
+    </div>
+  </section>
+</div>

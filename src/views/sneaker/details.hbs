@@ -1,0 +1,45 @@
+<section class="details-hero">
+  <div class="wrap">
+    <h2>Sneakers Details</h2>
+  </div>
+</section>
+
+<section class="details-content">
+  <div class="wrap">
+    <div class="sneakers-details">
+      <div class="sneakers-image">
+        <img src="{{sneaker.imageUrl}}" alt="shoe" />
+      </div>
+      <div class="sneakers-info">
+        <h3>Brand: {{sneaker.brand}}</h3>
+        <p><strong>Model:</strong> {{sneaker.model}}</p>
+        <p><strong>Price:</strong> ${{sneaker.price}}</p>
+        <p><strong>Size:</strong> {{sneaker.size}}</p>
+        <p><strong>Condition:</strong> {{sneaker.condition}}</p>
+        <p><strong>Model Year:</strong> {{sneaker.year}}</p>
+        <p><strong>Description:</strong> {{sneaker.description}}</p>
+      </div>
+    </div>
+
+    {{#if isCreator}}
+      <div class="buttons-wrap">
+        <button class="btn edit"><a
+            href="/sneakers/{{sneaker.id}}/edit"
+          >Edit</a></button>
+        <button class="btn delete"><a
+            href="/sneakers/{{sneaker.id}}/delete"
+          >Delete</a></button>
+      </div>
+    {{/if}}
+
+    {{#unless isCreator}}
+      {{#if hasPreferred}}
+        <p class="prefer-message">You've already preferred this sneaker!</p>
+      {{else}}
+        <form action="/sneakers/{{sneaker.id}}/prefer" method="POST">
+          <button type="submit" class="btn prefer">Prefer</button>
+        </form>
+      {{/if}}
+    {{/unless}}
+  </div>
+</section>

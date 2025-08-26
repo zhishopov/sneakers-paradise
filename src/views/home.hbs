@@ -1,0 +1,21 @@
+<section class="hero">
+  <div class="hero-wrap">
+    <h2>Welcome to Sneakers Paradise</h2>
+    <p>Where Style Meets Comfort!</p>
+    <a href="#" class="btn">Shop Now</a>
+  </div>
+</section>
+
+<section class="sneakers">
+  <div class="wrap">
+    <h2>Featured Sneakers</h2>
+    <div class="sneaker-catalog band">
+      {{#each sneakers}}
+        {{>sneaker}}
+      {{else}}
+        <p class="no-post">There haven't been any Sneakers posted yet.</p>
+      {{/each}}
+    </div>
+  </div>
+</section>
+

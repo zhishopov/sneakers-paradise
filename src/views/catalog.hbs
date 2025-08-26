@@ -1,0 +1,24 @@
+<section class="catalog">
+  <h2 class="heading-catalog">Catalog</h2>
+  <div class="wrap">
+    <div class="sneaker-catalog">
+      {{#each sneakers}}
+        <div class="sneakers-item">
+          <img src="{{imageUrl}}" />
+          <div>
+            <h3>{{brand}}</h3>
+            <h2>${{price}}</h2>
+            <p>Condition: {{condition}}</p>
+            <p>Model Year: {{year}}</p>
+            <p>Size: {{size}}</p>
+            <a href="/sneakers/{{_id}}/details" class="btn">View Details</a>
+          </div>
+        </div>
+      {{/each}}
+      <!-- Repeat sneakers-item divs for more products -->
+      {{#unless sneakers.length}}
+        <p class="no-post">There haven't been any sneakers posted yet.</p>
+      {{/unless}}
+    </div>
+  </div>
+</section>

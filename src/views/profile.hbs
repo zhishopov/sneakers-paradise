@@ -1,0 +1,47 @@
+<div class="profile-wrapper">
+  <section class="profile-hero">
+    <div class="wrap">
+      <h2>User Profile</h2>
+      <p>Welcome back,
+        <span id="username">{{user.name}}</span>
+        <strong id="email">({{user.email}})</strong>
+      </p>
+    </div>
+  </section>
+
+  <section class="added-sneakers">
+    <div class="wrap">
+      <h3>Added Sneakers</h3>
+      <div class="sneakers-list">
+        {{#each createdSneakers}}
+          <div class="sneaker">
+            <img src="{{this.imageUrl}}" alt="{{this.brand}} {{this.model}}" />
+            <p><strong>Brand:</strong> {{this.brand}}</p>
+            <p><strong>Model:</strong> {{this.model}}</p>
+            <a href="/sneakers/{{this._id}}/details" class="btn">View Details</a>
+          </div>
+        {{else}}
+          <p class="no-post">You haven't added any sneakers yet</p>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <section class="preferred-sneakers">
+    <div class="wrap">
+      <h3>Preferred Sneakers</h3>
+      <div class="sneakers-list">
+        {{#each preferredSneakers}}
+          <div class="sneaker">
+            <img src="{{this.imageUrl}}" alt="{{this.brand}} {{this.model}}" />
+            <p><strong>Brand:</strong> {{this.brand}}</p>
+            <p><strong>Model:</strong> {{this.model}}</p>
+            <a href="/sneakers/{{this._id}}/details" class="btn">View Details</a>
+          </div>
+        {{else}}
+          <p class="no-post">You haven't preferred any sneakers yet</p>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+</div>
